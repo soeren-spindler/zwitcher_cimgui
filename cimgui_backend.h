@@ -10,7 +10,7 @@ void igImGui_ImplWin32_Shutdown(void);
 
 void igImGui_ImplWin32_NewFrame(void);
 
-void ImGui_ImplWin32_EnableDpiAwareness();
+void ImGui_ImplWin32_EnableDpiAwareness(void);
 
 float ImGui_ImplWin32_GetDpiScaleForHwnd(void *hwnd); // HWND hwnd
 
