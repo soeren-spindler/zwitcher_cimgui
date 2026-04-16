@@ -16,6 +16,7 @@ float igImGui_ImplWin32_GetDpiScaleForHwnd(void *hwnd); // HWND hwnd
 
 float igImGui_ImplWin32_GetDpiScaleForMonitor(void *monitor); // HMONITOR monitor
 
+bool igImGui_ImplWin32_WndProcHandler(void *hwnd, unsigned int msg, void *wParam, void *lParam);
 
 bool igImGui_ImplDX11_Init(void *device, void *device_context);
 

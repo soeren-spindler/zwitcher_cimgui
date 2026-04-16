@@ -1,6 +1,9 @@
+#include <windows.h>
 #include "backends/imgui_impl_dx11.h"
 #include "backends/imgui_impl_win32.h"
 #include "imgui.h"
+
+extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 extern "C" {
 /*
@@ -17,12 +20,16 @@ void igImGui_ImplWin32_EnableDpiAwareness(void) { ImGui_ImplWin32_EnableDpiAware
 
 // HMONITOR monitor
 float igImGui_ImplWin32_GetDpiScaleForMonitor(void *monitor) {
-    ImGui_ImplWin32_GetDpiScaleForMonitor(monitor);
+    return ImGui_ImplWin32_GetDpiScaleForMonitor(monitor);
 }
 
-// HWND hwnd
 float igImGui_ImplWin32_GetDpiScaleForHwnd(void *hwnd) {
     return ImGui_ImplWin32_GetDpiScaleForHwnd(hwnd);
+}
+
+bool igImGui_ImplWin32_WndProcHandler(void *hwnd, const unsigned int msg, void *wParam, void *lParam) {
+    return ImGui_ImplWin32_WndProcHandler(static_cast<HWND>(hwnd), msg, reinterpret_cast<WPARAM>(wParam),
+                                          reinterpret_cast<LPARAM>(lParam));
 }
 
 /*
@@ -39,6 +46,6 @@ void igImGui_ImplDX11_Shutdown(void) { ImGui_ImplDX11_Shutdown(); }
 void igImGui_ImplDX11_NewFrame(void) { ImGui_ImplDX11_NewFrame(); }
 
 void igImGui_ImplDX11_RenderDrawData(void *draw_data) {
-    ImGui_ImplDX11_RenderDrawData((ImDrawData *) draw_data);
+    ImGui_ImplDX11_RenderDrawData(static_cast<ImDrawData *>(draw_data));
 }
 }
