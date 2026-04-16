@@ -1,0 +1,14 @@
+.{
+    .name = .zwitcher_cimgui,
+    .version = "0.0.1",
+    .fingerprint = 0x49a266fc136e18da,
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}
