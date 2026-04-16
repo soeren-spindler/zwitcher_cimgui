@@ -13,7 +13,7 @@ void igImGui_ImplWin32_Shutdown(void) { ImGui_ImplWin32_Shutdown(); }
 
 void igImGui_ImplWin32_NewFrame(void) { ImGui_ImplWin32_NewFrame(); }
 
-void igImGui_ImplWin32_EnableDpiAwareness() { ImGui_ImplWin32_EnableDpiAwareness(); }
+void igImGui_ImplWin32_EnableDpiAwareness(void) { ImGui_ImplWin32_EnableDpiAwareness(); }
 
 // HMONITOR monitor
 float igImGui_ImplWin32_GetDpiScaleForMonitor(void *monitor) {
