@@ -4,27 +4,27 @@
 extern "C" {
 #endif
 
-bool igImGui_ImplWin32_Init(void *hwnd);
+bool igImpl_Win32_Init(void *hwnd);
 
-void igImGui_ImplWin32_Shutdown(void);
+void igImpl_Win32_Shutdown(void);
 
-void igImGui_ImplWin32_NewFrame(void);
+void igImpl_Win32_NewFrame(void);
 
-void igImGui_ImplWin32_EnableDpiAwareness(void);
+void igImpl_Win32_EnableDpiAwareness(void);
 
-float igImGui_ImplWin32_GetDpiScaleForHwnd(void *hwnd); // HWND hwnd
+float igImpl_Win32_GetDpiScaleForHwnd(void *hwnd); // HWND hwnd
 
-float igImGui_ImplWin32_GetDpiScaleForMonitor(void *monitor); // HMONITOR monitor
+float igImpl_Win32_GetDpiScaleForMonitor(void *monitor); // HMONITOR monitor
 
-bool igImGui_ImplWin32_WndProcHandler(void *hwnd, unsigned int msg, void *wParam, void *lParam);
+bool igImpl_Win32_WndProcHandler(void *hwnd, unsigned int msg, void *wParam, void *lParam);
 
-bool igImGui_ImplDX11_Init(void *device, void *device_context);
+bool igImpl_DX11_Init(void *device, void *device_context);
 
-void igImGui_ImplDX11_Shutdown(void);
+void igImpl_DX11_Shutdown(void);
 
-void igImGui_ImplDX11_NewFrame(void);
+void igImpl_DX11_NewFrame(void);
 
-void igImGui_ImplDX11_RenderDrawData(void *draw_data);
+void igImpl_DX11_RenderDrawData(void *draw_data);
 
 #ifdef __cplusplus
 }
