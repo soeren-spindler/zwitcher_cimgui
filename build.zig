@@ -38,8 +38,8 @@ pub fn build(b: *std.Build) void {
         .root = b.path("."),
         .files = &.{
             "cimgui.cpp",
-            // "cimgui_impl.cpp",
             "cimgui_backend.cpp",
+            "cimgui_internal.cpp",
         },
         .flags = &[_][]const u8{
             "-std=c++17",

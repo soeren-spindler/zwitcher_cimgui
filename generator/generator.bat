@@ -21,7 +21,7 @@
 :: arg[3..n] name of implementations to generate and/or CFLAGS (e.g. -DIMGUI_USER_CONFIG) 
 ::-DIMGUI_USE_WCHAR32 should not be used (is discarded)
 
-luajit ./generator.lua cl "noimstrv internal freetype" %*
+luajit ./generator.lua cl "noimstrv freetype" %*
 
 ::leave console open
 cmd /k
