@@ -1,6 +1,6 @@
 .{
     .name = .zwitcher_cimgui,
-    .version = "0.0.3",
+    .version = "0.0.4",
     .fingerprint = 0x49a266fc136e18da,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{},
