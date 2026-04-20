@@ -13,6 +13,8 @@
         "cimgui.h",
         "cimgui_backend.cpp",
         "cimgui_backend.h",
+        "cimgui_internal.cpp",
+        "cimgui_internal.h",
         "LICENSE",
         "README.md",
     },
